@@ -46,6 +46,8 @@ export default {
 
     .center{
         ul{
+            padding: 0px !important;
+            margin-bottom: 0px;
             display: flex;
             align-items: center;
             height: 100%;
@@ -59,6 +61,7 @@ export default {
                         img{
                             height: 15px;
                             margin-inline: 5px;
+                            filter: invert(1);
                         }
                 }
         }

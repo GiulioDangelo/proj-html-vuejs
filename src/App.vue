@@ -1,6 +1,8 @@
 <script>
 import Jumbo from './components/Jumbo.vue'
 import Logos from './components/Logos.vue'
+import About from './components/About.vue'
+
 
 export default {
   data() {
@@ -11,6 +13,7 @@ export default {
     components:{
       Jumbo,
       Logos,
+      About,
     }
   }
 </script>
@@ -18,6 +21,7 @@ export default {
 <template>
   <Jumbo/>
   <Logos/>
+  <About/>
 </template>
 
 <style lang="scss">
