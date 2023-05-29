@@ -44,6 +44,9 @@ export default {
         right: 0;
     }
 
+    .left{
+    }
+
     .center{
         ul{
             padding: 0px !important;

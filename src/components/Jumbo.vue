@@ -19,7 +19,7 @@ export default {
         <h1>ARE YOU READY FOR YOUR NEXT CHALLENGE?</h1>
     </div>
 
-    <div>
+    <div class="more">
         <button class="btn">Read More <img src="../assets/img/image (8).svg"></button>
 
         <div class="play-container">
@@ -67,7 +67,7 @@ export default {
                     }
             }
 
-            div{
+            .more{
                 display: flex;
                 align-items: center;
                     img{
@@ -100,12 +100,14 @@ export default {
             }
             .social{
                 display: flex;
+                align-items: center;
                 flex-direction: column;
                 position: absolute;
                 left: 40px;
                     .img-container{
                         display: flex;
                         justify-content: center;
+                        align-items: center;
                         height: 50px;
                         width: 50px;
                         padding: 10px;

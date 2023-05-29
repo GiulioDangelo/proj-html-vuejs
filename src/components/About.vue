@@ -63,6 +63,8 @@ export default {
 @use '../assets/color.scss' as *;
 .container{
     color: white;
+    padding-bottom: 125px;
+    padding-top:125px ;
 
     .text-green{
         color: $green;
@@ -129,7 +131,7 @@ export default {
 
     .images-container{
         position: relative;
-        margin: 0 60px 0 0px;
+        margin: 0 60px 0 80px;
 
             .shape{
                 position: absolute;
@@ -144,6 +146,7 @@ export default {
                 position: relative;
                 z-index: 2000;
                 width: 100%;
+                height: 100%;
             }
 
             .green-1{
