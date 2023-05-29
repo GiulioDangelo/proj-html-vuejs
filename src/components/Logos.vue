@@ -5,14 +5,12 @@ export default {
     return {
         store,
     }
-  },
-
+  }
   }
 </script>
 
 <template>
-    <div class="logos" 
-    >
+    <div class="logos">
         <div class="logo" v-for="clan in this.store.clans"><img :src="clan.img"></div>
     </div>
 </template>

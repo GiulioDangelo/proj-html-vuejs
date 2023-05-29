@@ -2,6 +2,7 @@
 import Jumbo from './components/Jumbo.vue'
 import Logos from './components/Logos.vue'
 import About from './components/About.vue'
+import Highlights from './components/Highlights.vue'
 
 
 export default {
@@ -14,6 +15,7 @@ export default {
       Jumbo,
       Logos,
       About,
+      Highlights,
     }
   }
 </script>
@@ -22,6 +24,7 @@ export default {
   <Jumbo/>
   <Logos/>
   <About/>
+  <Highlights/>
 </template>
 
 <style lang="scss">
