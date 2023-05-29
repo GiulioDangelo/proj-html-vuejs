@@ -1,6 +1,16 @@
 <script>
+import { store } from './../../store'
+
 export default {
-    
+    data() {
+        return {
+            store,
+            // props: {
+            //     item: String,
+            //     img: String
+            // }
+        }
+    },
 }
 </script>
 
@@ -11,12 +21,8 @@ export default {
         </div>
 
         <div class="center">
-            <ul>
-                <li>adsasdas <img src="./../assets/img/image.svg"></li>
-                <li>adsasdas <img src="./../assets/img/image.svg"></li>
-                <li>adsasdas <img src="./../assets/img/image.svg"></li>
-                <li>adsasdas <img src="./../assets/img/image.svg"></li>
-                <li>adsasdas <img src="./../assets/img/image.svg"></li>
+            <ul >
+                <li v-for="item in store.menuList">{{item.item}} <img src="./../assets/img/image.svg"></li>
             </ul>
         </div>
 
@@ -31,7 +37,11 @@ export default {
     .nav{
         display: flex;
         justify-content: space-around;
-        background-color: rgb(196, 13, 13);
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 
     .center{
