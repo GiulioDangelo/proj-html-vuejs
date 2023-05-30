@@ -24,35 +24,40 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="text">
-            <span>Trending Games</span>
-            <h2>Choose Who Is The Best In World!</h2>
-        </div>
+    <div class="background-image">
+        <img class="bg-img" src="./../assets/img/protfolio-vector.png">
 
-        <div class="carousel-btn">
-            <button class="prev"><img src="../assets/img/image (11).svg"></button>
-            <button class="next"><img src="../assets/img/image (12).svg"></button>
-        </div>
+        <div class="container">
+            <div class="text">
+                <span>Trending Games</span>
+                <h2>Choose Who Is The Best In World!</h2>
+            </div>
+    
+            <div class="carousel-btn">
+                <button class="prev"><img src="../assets/img/image (11).svg"></button>
+                <button class="next"><img src="../assets/img/image (12).svg"></button>
+            </div>
+    
+            <Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000">
+                <slide class="cards" v-for="card in store.games">
+            
+                    <div class="card-container">
+                        <img class="img" :src="card.img" :alt="card.name">
+                        <div class="bottom">
+                            <div>
+                                <div class="name">{{ card.name }}</div>
+                                <div class="text">{{ card.text }}</div>
+                            </div>
+    
+                            <div class="img-container">
+                                <img src="./../assets/img/image (9).svg">
+                            </div>
 
-        <Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000">
-            <slide class="cards" v-for="card in store.games">
-                <div class="card-container">
-                    <img class="img" :src="card.img" :alt="card.name">
-                    <div class="bottom">
-                        <div>
-                            <div class="name">{{ card.name }}</div>
-                            <div class="text">{{ card.text }}</div>
                         </div>
-
-                        <div class="img-container">
-                            <img src="./../assets/img/image (9).svg">
-                        </div>
-
                     </div>
-                </div>
-            </slide>
-        </Carousel>
+                </slide>
+            </Carousel>
+        </div>
     </div>
 </template>
 <navigation />
@@ -60,6 +65,26 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/color.scss' as *;
+.background-image {
+	height: 700px;
+	background-image: url('');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+	.bg-img {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		filter: opacity(0.4);
+	}
+}
+
 
 .container{
     color: white;
