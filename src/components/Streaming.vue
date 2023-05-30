@@ -1,15 +1,27 @@
 <script>
-	import {Splide, SplideSlide} from "@splidejs/vue-splide";
-	import "@splidejs/vue-splide/css";
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 	export default {
-		components: {
-			Splide,
-			SplideSlide,
-		},
+		name: 'App',
+    	components: {
+        Carousel,
+        Slide,
+        Pagination,
+        Navigation,
+    },
+
+	data() {
+		return {
+			imgs:[
+				{"img" : '../assets/img/v-small1.png'},
+				{"img" : '../assets/img/v-small2.png'}
+			]
+		}
+	},
 	};
 </script>
 
-<template>
+<!-- <template>
 	<div class="container">
 		<div class="col-6 left">
 			<img src="../assets/img/v-1.png" />
@@ -21,43 +33,15 @@
 				<h2>Checkout Our Live Streaming</h2>
 			</div>
 
-
-			<div id="carouselExample" class="carousel slide position-relative">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../assets/img/v-small1.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-
-			<!-- <Splide :options="{rewind: true}" >
-				<SplideSlide>
-					<img src="../assets/img/v-small1.png" alt="Sample 1" />
-				</SplideSlide>
-				<SplideSlide>
-					<img src="../assets/img/v-small2.png" alt="Sample 2" />
-				</SplideSlide>
-			</Splide> -->
+			<Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000">
+            <slide>
+				<img src="../assets/img/v-small1.png">
+            </slide>
+        </Carousel>
 
 		</div>
 	</div>
-</template>
+</template> -->
 
 <style lang="scss" scoped>
 .carousel-control-prev,

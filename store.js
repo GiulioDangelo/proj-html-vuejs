@@ -119,7 +119,30 @@ export const store = reactive({
                     }
                 ]
             },
-        ]
+        ],
+
+        games:[
+            {
+              'img': 'src/assets/img/protfolio1.png',
+              'name': 'Call Of Duty',
+              'text': 'Donec sollicitudin malesuada.'
+            },
+            {
+                'img': 'src/assets/img/protfolio2.png',
+                'name': 'Tomb Raider',
+                'text': 'Donec sollicitudin malesuada.'
+            },
+            {
+                'img': 'src/assets/img/protfolio3.png',
+                'name': 'Mortal Kombat X',
+                'text': 'Donec sollicitudin malesuada.'
+            },
+            {
+                'img': 'src/assets/img/protfolio4.png',
+                'name': 'Assassin’s Creed',
+                'text': 'Donec sollicitudin malesuada.'
+            },
+          ],
         
 
           
