@@ -39,7 +39,7 @@
 
 					<div class="card-vs">VS</div>
 
-					<div class="team-right">
+					<div class="team-right rounded">
 						<div class="card-top">
 							<img :src="card.img" alt="" />
 						</div>
@@ -81,14 +81,43 @@
 	@use "../assets/color.scss" as *;
 
 	.container {
+        margin-top: 100px;
 		color: white;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 
+        span{
+            font-size: 18px;
+            font-weight: 600;
+            color: $green;
+        }
+
+        h2{
+            font-size: 48px;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
 		ul {
 			display: flex;
+
+                li{
+                    margin-inline: 5px;
+                    list-style: none;
+                    font-size: 20px;
+                    font-weight: 600;
+
+                        &:first-child{
+                            color: $green;
+                        }
+
+                        &:hover{
+                            color: $green;
+                            cursor: pointer;
+                        }
+                }
 		}
 
 		.card-big {
@@ -100,9 +129,42 @@
 			border: 1px solid $green;
 			border-radius: 10px;
 
-			&:hover {
+			&:hover{
 				background-color: $light-blue-bg;
+                border: 1px solid $dark-blue;
+                cursor: pointer;
+
+                .card-date{
+                        background-color: $light-green;
+                        color: $dark-blue;
+
+                            .img-container{
+                                background-color: $dark-blue;
+
+                                    img{
+                                        filter: invert(1);
+                                    }
+                            }
+                    }
 			}
+
+            &:first-child{
+				background-color: $light-blue-bg;
+                border: none;
+
+                    .card-date{
+                        background-color: $light-green;
+                        color: $dark-blue;
+
+                            .img-container{
+                                background-color: $dark-blue;
+
+                                    img{
+                                        filter: invert(1);
+                                    }
+                            }
+                    }
+            }
 		}
 
 		.card-top {
@@ -114,13 +176,8 @@
 			border-radius: 10px;
 		}
 
-		.team-left,
-		.team-right {
-			background-color: rgb(21, 34, 88);
-		}
-
 		.card-bottom {
-			background-color: rgb(21, 34, 88);
+            background-color: rgb(21, 34, 88);
 			width: 100%;
 			height: 100px;
 			display: flex;
@@ -130,9 +187,10 @@
 			text-align: center;
 			border-radius: 10px;
 		}
-
+        
 		.team-left,
 		.team-right {
+            background-color: rgb(21, 34, 88);
 			width: 200px;
 			display: flex;
 			flex-direction: column;
@@ -164,6 +222,7 @@
 		.text {
 			width: 50%;
 		}
+
 		.card-date {
 			display: flex;
 			flex-direction: column;
@@ -180,6 +239,7 @@
 				.img-container {
 					height: 40px;
 					width: 40px;
+                    margin-inline: 5px;
 					border-radius: 100%;
 					background-color: $green;
 					img {
