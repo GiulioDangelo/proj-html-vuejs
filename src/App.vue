@@ -3,7 +3,8 @@ import Jumbo from './components/Jumbo.vue'
 import Logos from './components/Logos.vue'
 import About from './components/About.vue'
 import Highlights from './components/Highlights.vue'
-import Streaming from './components/Streaming.vue'
+// import Streaming from './components/Streaming.vue'
+import Upcoming from './components/Upcoming.vue'
 
 
 export default {
@@ -17,7 +18,8 @@ export default {
       Logos,
       About,
       Highlights,
-      Streaming,
+      // Streaming,
+      Upcoming,
     }
   }
 </script>
@@ -27,7 +29,8 @@ export default {
   <Logos/>
   <About/>
   <Highlights/>
-  <Streaming/>
+  <!-- <Streaming/> -->
+  <Upcoming/>
 </template>
 
 <style lang="scss">
