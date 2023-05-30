@@ -1,7 +1,5 @@
 <script>
 import { store } from '../../store'
-import { ref } from 'vue'
-const myCarousel = ref(null)
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 export default {
@@ -20,12 +18,7 @@ export default {
     },
 
     methods: {
-        next(){
-            const slideNext = () => myCarousel.next
-        },
-        prev(){
-            const slideNext = () => myCarousel.prev
-        }
+
     },
 }
 </script>
@@ -38,11 +31,11 @@ export default {
         </div>
 
         <div class="carousel-btn">
-            <button @click="myCarousel.next()" class="prev"><img src="../assets/img/image (11).svg"></button>
-            <button @click="next" class="next"><img src="../assets/img/image (12).svg"></button>
+            <button class="prev"><img src="../assets/img/image (11).svg"></button>
+            <button class="next"><img src="../assets/img/image (12).svg"></button>
         </div>
 
-        <Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000" ref="myCarousel">
+        <Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000">
             <slide class="cards" v-for="card in store.games">
                 <div class="card-container">
                     <img class="img" :src="card.img" :alt="card.name">
@@ -118,6 +111,9 @@ h2{
 }
 
 .img-container {
+    display: flex;
+	align-items: center;
+	justify-content: center;
     height: 40px;
     width: 40px;
     margin-inline: 5px;

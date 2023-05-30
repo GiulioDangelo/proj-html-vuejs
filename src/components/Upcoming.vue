@@ -26,7 +26,7 @@
 
 		<div class="card-container">
 			<div class="card-big" v-for="card in store.clans">
-				<div class="col-6 content-left">
+				<div class="col-6 content-left rounded">
 					<div class="team-left">
 						<div class="card-top">
 							<img :src="card.img" alt="" />
@@ -195,6 +195,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			border-radius: 10px;
 		}
 	}
 
@@ -237,6 +238,9 @@
 			.icon {
 				display: flex;
 				.img-container {
+					display: flex;
+					align-items: center;
+					justify-content: center;
 					height: 40px;
 					width: 40px;
                     margin-inline: 5px;
