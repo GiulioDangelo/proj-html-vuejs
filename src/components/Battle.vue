@@ -2,6 +2,7 @@
 import { store } from '../../store'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import {ref} from 'vue'
 export default {
     data() {
         return {
@@ -39,7 +40,7 @@ export default {
                         <button class="next"><img src="../assets/img/image (12).svg"></button>
                     </div> -->
 
-            <Carousel :items-to-show="3" :wrap-around="true">
+            <Carousel :items-to-show="3" :wrap-around="true" ref="myCarousel">
                 <slide class="cards" v-for="card in store.clans.slice(0,3)">
                     <div class="card-container">
                         <div class="top">

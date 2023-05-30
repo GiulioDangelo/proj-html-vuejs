@@ -2,6 +2,7 @@
 import { store } from '../../store'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import {ref} from 'vue'
 export default {
     data() {
         return {
@@ -17,9 +18,13 @@ export default {
         Navigation,
     },
 
-    methods: {
+    setup() {
+            const myCarousel = ref(null);
 
-    },
+            return {
+            myCarousel,
+            }
+        },
 }
 </script>
 
@@ -34,11 +39,11 @@ export default {
             </div>
     
             <div class="carousel-btn">
-                <button class="prev"><img src="../assets/img/image (11).svg"></button>
-                <button class="next"><img src="../assets/img/image (12).svg"></button>
+                <button @click=myCarousel.prev class="prev" ><img src="../assets/img/image (11).svg"></button>
+                <button @click=myCarousel.next class="next" ><img src="../assets/img/image (12).svg"></button>
             </div>
     
-            <Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000">
+            <Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000" ref="myCarousel">
                 <slide class="cards" v-for="card in store.games">
             
                     <div class="card-container">

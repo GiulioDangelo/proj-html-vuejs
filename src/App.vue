@@ -7,6 +7,7 @@ import Streaming from './components/Streaming.vue'
 import Upcoming from './components/Upcoming.vue'
 import Trending from './components/Trending.vue'
 import Battle from './components/Battle.vue'
+import OurTeam from './components/OurTeam.vue'
 
 
 
@@ -26,6 +27,7 @@ export default {
       Upcoming,
       Trending,
       Battle,
+      OurTeam,
     }
   }
 </script>
@@ -39,6 +41,7 @@ export default {
   <Upcoming/>
   <Trending/>
   <Battle/>
+  <OurTeam/>
 </template>
 
 <style lang="scss">

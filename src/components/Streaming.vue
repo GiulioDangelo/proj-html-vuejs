@@ -1,6 +1,7 @@
 <script>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import {ref} from 'vue'
 import { store } from '../../store';
 export default {
 	name: 'App',
@@ -44,7 +45,7 @@ export default {
 				</div>
 
 
-				<Carousel :items-to-show="2">
+				<Carousel :items-to-show="2" ref="myCarousel">
 					<Slide v-for="img in this.imgs" :key="slide">
 						<div>
 							<img :src="img.img">

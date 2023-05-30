@@ -143,9 +143,61 @@ export const store = reactive({
                 'text': 'Donec sollicitudin malesuada.'
             },
           ],
-        
-
           
+        members:[
+            {
+                'name': 'Cristiano Messi',
+                'img': 'src/assets/img/team1.png',
+                'job': 'CEO/Founder',
+                'social':[{
+                    'facebook': 'src/assets/img/image (4).svg',
+                    'twitter': 'src/assets/img/image (5).svg',
+                    'linkedin': 'src/assets/img/image (6).svg',
+                    'instagram': 'src/assets/img/image (7).svg',
+                }
+                ],
+                
+            },
+            {
+                'name': 'Sergio Naymer',
+                'img': 'src/assets/img/team2.png',
+                'job': 'Programmer',
+                'social':[{
+                    'facebook': 'src/assets/img/image (4).svg',
+                    'twitter': 'src/assets/img/image (5).svg',
+                    'linkedin': 'src/assets/img/image (6).svg',
+                    'instagram': 'src/assets/img/image (7).svg',
+                }
+                ],
+                
+            },
+            {
+                'name': 'Antonella Rocuzzo',
+                'img': 'src/assets/img/team3.png',
+                'job': 'Project Menager',
+                'social':[{
+                    'facebook': 'src/assets/img/image (4).svg',
+                    'twitter': 'src/assets/img/image (5).svg',
+                    'linkedin': 'src/assets/img/image (6).svg',
+                    'instagram': 'src/assets/img/image (7).svg',
+                }
+                ],
+                
+            },
+            {
+                'name': 'Lionel Ramos',
+                'img': 'src/assets/img/team4.png',
+                'job': 'Game Designer',
+                'social':[{
+                    'facebook': 'src/assets/img/image (4).svg',
+                    'twitter': 'src/assets/img/image (5).svg',
+                    'linkedin': 'src/assets/img/image (6).svg',
+                    'instagram': 'src/assets/img/image (7).svg',
+                }
+                ],
+                
+            },
+        ]
         }
 
 )
