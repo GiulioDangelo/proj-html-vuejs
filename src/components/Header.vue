@@ -118,6 +118,15 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/color.scss' as *;
 
+.dropdown-menu{
+    background-color: rgb(32, 32, 70);
+}
+
+.dropdown-item{
+    color: $green;
+    border-bottom: 1px solid white;
+}
+
 .nav {
     display: flex;
     justify-content: space-around;

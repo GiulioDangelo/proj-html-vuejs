@@ -58,6 +58,7 @@ export default {
                 <button @click=myCarousel.next class="next" ><img src="../assets/img/image (12).svg"></button>
             </div>
 
+			<!-- FIXME: :wrap-around="true" -->
 				<Carousel :items-to-show="2" :autoplay="3000" ref="myCarousel">
 					<Slide v-for="img in this.imgs" :key="slide">
 						<div>
@@ -69,9 +70,6 @@ export default {
 						</div>
 					</Slide>
 
-					<template #addons>
-						<Navigation />
-					</template>
 				</Carousel>
 
 
@@ -126,13 +124,11 @@ h2{
 	align-items: flex-start;
 }
 
-
 .carousel-btn{
 	width: 100%;
     display: flex;
     justify-content: flex-end;
 }
-
 
 .prev,.next{
     padding: 10px;
@@ -186,7 +182,6 @@ h2{
     }
 }
 
-
 .right {
 	display: flex;
 	flex-direction: column;
@@ -199,7 +194,7 @@ h2{
 }
 
 .carousel-slide {
-	width: 300px;
+	// width: 300px;
 }
 
 .carousel-item {

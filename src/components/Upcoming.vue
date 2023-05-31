@@ -4,6 +4,14 @@ export default {
 	data() {
 		return {
 			store,
+
+			match:[
+				// {
+				// 	'left': './../assets/img/image (13).svg',
+				// 	'right': './../assets/img/image (13).svg',
+				// 	'game': 'pubg'
+				// },
+			]
 		};
 	},
 };
@@ -16,11 +24,11 @@ export default {
 
 		<div class="card-select">
 			<ul>
-				<li>test</li>
-				<li>test</li>
-				<li>test</li>
-				<li>test</li>
-				<li>test</li>
+				<li>All</li>
+				<li>Pubg</li>
+				<li>COD</li>
+				<li>AC</li>
+				<li>MCK</li>
 			</ul>
 		</div>
 
