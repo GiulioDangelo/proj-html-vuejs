@@ -2,7 +2,7 @@
 import { store } from '../../store'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import {ref} from 'vue'
+import { ref } from 'vue'
 export default {
     data() {
         return {
@@ -19,12 +19,12 @@ export default {
     },
 
     setup() {
-            const myCarousel = ref(null);
+        const myCarousel = ref(null);
 
-            return {
+        return {
             myCarousel,
-            }
-        },
+        }
+    },
 }
 </script>
 
@@ -40,12 +40,12 @@ export default {
             </div>
 
             <div class="carousel-btn">
-                <button @click=myCarousel.prev class="prev" ><img src="../assets/img/image (11).svg"></button>
-                <button @click=myCarousel.next class="next" ><img src="../assets/img/image (12).svg"></button>
+                <button @click=myCarousel.prev class="prev"><img src="../assets/img/image (11).svg"></button>
+                <button @click=myCarousel.next class="next"><img src="../assets/img/image (12).svg"></button>
             </div>
 
             <Carousel :items-to-show="3" :wrap-around="true" ref="myCarousel">
-                <slide class="cards" v-for="card in store.clans.slice(0,3)">
+                <slide class="cards" v-for="card in store.clans.slice(0, 3)">
                     <div class="card-container">
                         <div class="top">
                             <div class="img-container">
@@ -95,13 +95,13 @@ export default {
     position: relative;
 }
 
-span{
+span {
     color: $green;
     font-size: 20px;
     font-weight: 700;
 }
 
-h2{
+h2 {
     font-size: 50px;
     font-weight: 700;
 }
@@ -155,12 +155,12 @@ h2{
     opacity: 0.1;
 }
 
-.shadow{
+.shadow {
     height: 300px;
     z-index: -30000;
 }
 
-.img-container{
+.img-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,7 +171,7 @@ h2{
     z-index: 20;
 }
 
-.img{
+.img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -198,43 +198,44 @@ h2{
     }
 }
 
-.name{
+.name {
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.time{
+.time {
     font-size: 48px;
     font-weight: 700;
 }
 
-.date{
+.date {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-button{
-padding: 10px 20px;
-background-color: $light-green;
-font-size: 20px;
-margin-bottom: 30px;
-font-weight: 600;
-border-radius: 10px;
+button {
+    padding: 10px 20px;
+    background-color: $light-green;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    border-radius: 10px;
 
-    &:hover{
+    &:hover {
         background-color: rgb(32, 32, 70);
-        color:$green;
+        color: $green;
         border: 1px solid $green;
     }
 }
 
-.carousel-btn{
+.carousel-btn {
     display: flex;
     justify-content: flex-end;
 }
 
-.prev,.next{
+.prev,
+.next {
     padding: 10px;
     border-radius: 100px;
     display: flex;
@@ -243,20 +244,20 @@ border-radius: 10px;
     border: none;
     margin-left: 15px;
     margin-bottom: 5px;
-        img{
-            height: 20px;
-        }
+
+    img {
+        height: 20px;
+    }
 }
 
-.next{
+.next {
     background-color: $green;
 
-        img{
-            filter: invert(1);
-        }
+    img {
+        filter: invert(1);
+    }
 }
 
-.prev{
+.prev {
     background-color: white;
-}
-</style>
+}</style>

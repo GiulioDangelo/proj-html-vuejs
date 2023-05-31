@@ -29,7 +29,7 @@ export default {
 
         <div class="social">
             <div class="img-container"><img src="../assets/img/image (4).svg"></div>
-            <div class="img-container"><img src="../assets/img/image (5).svg"></div>
+            <div class="img-container green"><img src="../assets/img/image (5).svg"></div>
             <div class="img-container"><img src="../assets/img/image (6).svg"></div>
             <div class="img-container"><img src="../assets/img/image (7).svg"></div>
         </div>
@@ -147,4 +147,9 @@ export default {
 
 .btn:hover {
     color: white;
-}</style>
+}
+
+.green{
+    background-color: $green !important;
+}
+</style>

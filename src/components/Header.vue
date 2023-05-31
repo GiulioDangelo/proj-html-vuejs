@@ -55,7 +55,10 @@ export default {
 
         <div class="center">
             <ul class="links">
-                <li v-for="item in store.menuList">{{ item.item }}
+                <li v-for="(item , i) in store.menuList" 
+                :class="{ 'first-card': i === 0 }"
+                >
+                    {{ item.item }}
                     <div class="dropdown">
                         <img class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                             src="./../assets/img/image.svg">
@@ -231,5 +234,12 @@ export default {
     position: absolute;
     top: -10px;
     right: -10px;
+}
+
+.first-card{
+    color: $green !important;
+     img{
+        filter: brightness(0) saturate(100%) invert(48%) sepia(62%) saturate(6830%) hue-rotate(134deg) brightness(103%) contrast(104%) !important;
+     }
 }
 </style>

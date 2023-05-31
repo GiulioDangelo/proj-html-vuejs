@@ -49,7 +49,7 @@ export default {
 
         <div class="container">
             <div class="text">
-                <span>Testionials</span>
+                <span>Testimonials</span>
                 <h2>What Our Client Say</h2>
             </div>
     
@@ -128,8 +128,8 @@ export default {
 span{
     color: $green;
     font-weight: 600;
-    font-size: 18px;
-    margin-left: 200px;
+    font-size: 20px;
+    margin-left: 100px;
 }
 
 h2{

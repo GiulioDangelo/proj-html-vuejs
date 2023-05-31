@@ -8,7 +8,7 @@ import Upcoming from './components/Upcoming.vue'
 import Trending from './components/Trending.vue'
 import Battle from './components/Battle.vue'
 import OurTeam from './components/OurTeam.vue'
-import Testionials from './components/Testionials.vue'
+import Testimonials from './components/Testimonials.vue'
 import Shop from './components/Shop.vue'
 import News from './components/News.vue'
 import Newsletter from './components/Newsletter.vue'
@@ -32,7 +32,7 @@ export default {
       Trending,
       Battle,
       OurTeam,
-      Testionials,
+      Testimonials,
       Shop,
       News,
       Newsletter, 
@@ -51,7 +51,7 @@ export default {
   <Trending/>
   <Battle/>
   <OurTeam/>
-  <Testionials/>
+  <Testimonials/>
   <Shop/>
   <News/>
   <Newsletter/>

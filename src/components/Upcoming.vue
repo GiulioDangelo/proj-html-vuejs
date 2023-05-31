@@ -68,8 +68,8 @@ export default {
 					</div>
 
 					<div class="card-date">
-						<div class="time">322</div>
-						<div class="date">1 eqsd 3223</div>
+						<div class="time">08.45</div>
+						<div class="date">1st November, 2022</div>
 						<div class="icon">
 							<div class="img-container">
 								<img src="./../assets/img/image (13).svg" />
@@ -263,5 +263,15 @@ export default {
 			}
 		}
 	}
+}
+
+.time{
+	font-size: 35px;
+	font-weight: 700;
+}
+
+.date{
+	margin-bottom: 10px;
+	font-size: 20px;
 }
 </style>
