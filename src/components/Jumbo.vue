@@ -127,4 +127,8 @@ export default {
             }
     }
 
+
+.btn:hover{
+    color:white;
+}
 </style>
