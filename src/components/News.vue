@@ -97,7 +97,7 @@ export default {
 
 .container {
     color: white;
-    margin-top: 400px;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 
