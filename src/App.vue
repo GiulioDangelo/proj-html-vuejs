@@ -9,6 +9,9 @@ import Trending from './components/Trending.vue'
 import Battle from './components/Battle.vue'
 import OurTeam from './components/OurTeam.vue'
 import Testionials from './components/Testionials.vue'
+import Shop from './components/Shop.vue'
+import News from './components/News.vue'
+
 
 
 export default {
@@ -28,6 +31,8 @@ export default {
       Battle,
       OurTeam,
       Testionials,
+      Shop,
+      News,
     }
   }
 </script>
@@ -43,6 +48,8 @@ export default {
   <Battle/>
   <OurTeam/>
   <Testionials/>
+  <Shop/>
+  <News/>
 </template>
 
 <style lang="scss">

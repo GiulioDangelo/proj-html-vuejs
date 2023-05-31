@@ -197,6 +197,25 @@ export const store = reactive({
                 ],
                 
             },
+        ],
+
+        shop:[
+            {
+                'product': 'Asus Rog Strix A53',
+                'img': 'src/assets/img/s1.png',
+            },
+            {
+                'product': 'Asus Rog Strix A53',
+                'img': 'src/assets/img/s2.png',
+            },
+            {
+                'product': 'Asus Rog Strix A53',
+                'img': 'src/assets/img/s3.png',
+            },
+            {
+                'product': 'Asus Rog Strix A53',
+                'img': 'src/assets/img/s4.png',
+            },
         ]
         }
 

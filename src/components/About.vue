@@ -66,6 +66,11 @@ export default {
     padding-bottom: 125px;
     padding-top:125px ;
 
+    h2{
+        font-size: 50px;
+        font-weight: 700;
+    }
+
     .text-green{
         color: $green;
     }
@@ -92,6 +97,7 @@ export default {
                         height: 23px;
                         fill: $green;
                         padding: 4px;
+                        filter: brightness(0) saturate(100%) invert(48%) sepia(62%) saturate(6830%) hue-rotate(134deg) brightness(103%) contrast(104%);
                     }
             }
     }
