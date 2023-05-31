@@ -11,6 +11,7 @@ import OurTeam from './components/OurTeam.vue'
 import Testionials from './components/Testionials.vue'
 import Shop from './components/Shop.vue'
 import News from './components/News.vue'
+import Footer from './components/Footer.vue'
 
 
 
@@ -33,6 +34,7 @@ export default {
       Testionials,
       Shop,
       News,
+      Footer,
     }
   }
 </script>
@@ -50,6 +52,7 @@ export default {
   <Testionials/>
   <Shop/>
   <News/>
+  <Footer/>
 </template>
 
 <style lang="scss">

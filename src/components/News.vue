@@ -199,7 +199,7 @@ h2 {
 
 }
 
-button {
+.btn {
     margin-top: 20px;
     background-color: $light-green;
     display: flex;

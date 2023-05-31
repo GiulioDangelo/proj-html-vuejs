@@ -5,10 +5,6 @@ export default {
     data() {
         return {
             store,
-            // props: {
-            //     item: String,
-            //     img: String
-            // }
         }
     },
 }
@@ -42,9 +38,6 @@ export default {
         top: 0;
         left: 0;
         right: 0;
-    }
-
-    .left{
     }
 
     .center{
