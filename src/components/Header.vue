@@ -5,9 +5,46 @@ export default {
     data() {
         return {
             store,
-        }
+            cart: [
+                {
+                    product: 'Sony PS5 White',
+                    img: 'src/assets/img/s1.png',
+                    price: 254,
+                },
+                {
+                    product: 'A4 Tec Mouse',
+                    img: 'src/assets/img/s2.png',
+                    price: 121,
+                },
+                {
+                    product: 'Gear VR Led',
+                    img: 'src/assets/img/s3.png',
+                    price: 514,
+                },
+            ],
+            totalPrice: 0,
+        };
     },
-}
+
+    mounted() {
+        this.calculateTotalPrice();
+    },
+
+    methods: {
+        removeItem(index) {
+            this.cart.splice(index, 1);
+            this.calculateTotalPrice();
+        },
+        calculateTotalPrice() {
+            let sum = 0;
+            for (let i = 0; i < this.cart.length; i++) {
+                sum += this.cart[i].price;
+            }
+            this.totalPrice = sum;
+        },
+    },
+};
+
 </script>
 
 <template>
@@ -20,12 +57,8 @@ export default {
             <ul class="links">
                 <li v-for="item in store.menuList">{{ item.item }}
                     <div class="dropdown">
-                        <img class="dropdown-toggle" 
-                            type="button" 
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            src="./../assets/img/image.svg"
-                            >
+                        <img class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            src="./../assets/img/image.svg">
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">About Us</a></li>
@@ -39,19 +72,52 @@ export default {
                     </div>
 
 
-                    <img >
+                    <img>
                 </li>
             </ul>
         </div>
 
         <div class="right">
             <div class="icon"><img src="./../assets/img/image (1).svg" alt=""></div>
-            <div class="icon"><img src="./../assets/img/image (3).svg" alt=""></div>
+
+
+            <p class="mb-0">
+                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                    aria-controls="collapseExample">
+
+                    <div class="icon">
+                        <img src="./../assets/img/image (3).svg" alt="">
+                        <div class="item-num">0</div>
+                    </div>
+
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body position-absolute">
+                    <div class="card_" v-for="(item, i ) in this.cart" :key="i">
+                        <div class="img-container">
+                            <img :src="item.img">
+                        </div>
+
+                        <div class="text">
+                            <div class="name">{{ item.product }}</div>
+                            <div class="price">Quality: ${{ item.price }}</div>
+                        </div>
+                        <div @click="removeItem(i)" class="remove">X</div>
+                    </div>
+
+                    <div class="total">Total: ${{ totalPrice }}</div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/color.scss' as *;
+
 .nav {
     display: flex;
     justify-content: space-around;
@@ -91,15 +157,70 @@ export default {
     align-items: center;
 
     .icon {
-        height: 30px;
+        height: 40px;
         margin-inline: 5px;
         background-color: white;
         border-radius: 100px;
-
+        position: relative;
+        padding: 6px;
         img {
             height: 100%;
             padding: 5px;
+            filter: brightness(0) saturate(100%) invert(20%) sepia(95%) saturate(1143%) hue-rotate(219deg) brightness(89%) contrast(90%);
         }
     }
+}
 
-}</style>
+.card-body {
+    color: white;
+    position: relative;
+    right: 260px;
+    top: 63px;
+    background-color: rgba($color: rgb(37, 37, 73), $alpha: 0.6);
+}
+
+.remove {
+    cursor: pointer;
+    margin-left: 20px;
+    color: $green;
+}
+
+.card_ {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    width: 60px;
+    height: 50px;
+    border: 1px solid $green;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item-num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color:rgb(64, 82, 253);
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    z-index: 224;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+</style>

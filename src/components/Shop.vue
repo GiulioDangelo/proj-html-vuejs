@@ -33,7 +33,7 @@ export default {
         <!-- <div class="bg-img"><img src="../assets/img/shop-bg.png"></div> -->
         <div class="container">
             <div class="text">
-                <span>Gammer Shop</span>
+                <span class="green">Gammer Shop</span>
                 <h2>Explore Our Shop</h2>
             </div>
     
@@ -97,23 +97,38 @@ export default {
     // filter: opacity;
 }
 
+.background-image::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 25, 53, 0.8);
+}
+
 
 .container{
-    color: white;
     margin-top: 100px;
     margin-bottom: 100px;
+    z-index: 43343;
 }
 
 span{
-    color: $green;
     margin-left:115px ;
     font-weight: 600;
     font-size: 18px;
+    color: white;
+}
+
+.green{
+    color: $green;
 }
 
 h2{
     font-size: 50px;
     font-weight: 700;
+    color: white;
 }
 
 .carousel-btn{
@@ -260,6 +275,7 @@ h2{
 
 .product{
     font-size: 20px;
+    color: white;
 }
 
 .green-svg{
