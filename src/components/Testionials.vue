@@ -141,7 +141,7 @@ h2{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 270px;
+    top: 370px;
     z-index: 20;
 }
 

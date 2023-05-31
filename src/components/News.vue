@@ -98,7 +98,7 @@ export default {
 .container {
     color: white;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 
 span {
@@ -207,5 +207,15 @@ h2 {
     padding: 10px 40px;
     font-size: 20px;
     font-weight: 700;
+
+    &:hover {
+            color: $green;
+            border: 1px solid $green;
+            background-color: transparent;
+
+            &:hover img {
+                filter: brightness(0) saturate(100%) invert(48%) sepia(62%) saturate(6830%) hue-rotate(134deg) brightness(103%) contrast(104%);
+            }
+        }
 }
 </style>

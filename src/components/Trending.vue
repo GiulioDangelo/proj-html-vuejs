@@ -47,7 +47,10 @@ export default {
                 <slide class="cards" v-for="card in store.games">
             
                     <div class="card-container">
-                        <img class="img" :src="card.img" :alt="card.name">
+                        <div class="top">
+                            <img class="img" :src="card.img" :alt="card.name">
+                            <div class="new">New</div>
+                        </div>
                         <div class="bottom">
                             <div>
                                 <div class="name">{{ card.name }}</div>
@@ -135,7 +138,7 @@ h2{
         }
 }
 
-.cards {
+.cards{
     width: 330px;
     margin-inline: 20px;
 
@@ -144,6 +147,18 @@ h2{
     }
 }
 
+.top{
+    position: relative;
+}
+
+.new{
+    color: black;
+    background-color: $light-green;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .card-container:hover .bottom{
     background-color: $light-green;
