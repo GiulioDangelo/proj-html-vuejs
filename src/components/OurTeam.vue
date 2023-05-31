@@ -135,6 +135,10 @@ h2{
     }
 }
 
+.card-container:hover .bottom{
+    background-color: $light-green;
+}
+
 .bottom {
     color: white;
     background-color: $dark-blue;
