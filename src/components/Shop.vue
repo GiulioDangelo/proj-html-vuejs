@@ -30,7 +30,7 @@ export default {
 
 <template>
     <div class="background-image">
-        <div class="bg-img"><img src="../assets/img/shop-bg.png"></div>
+        <!-- <div class="bg-img"><img src="../assets/img/shop-bg.png"></div> -->
         <div class="container">
             <div class="text">
                 <span>Gammer Shop</span>
@@ -87,24 +87,14 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/color.scss' as *;
 .background-image {
-    height: 700px;
+    background-image: url('../assets/img/shop-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
     position: relative;
     display: flex;
     align-items: center;
-
-    .bg-img {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        filter: opacity(0.4);
-
-            img{
-                width: 100%;
-            }
-    }
+    // filter: opacity;
 }
 
 

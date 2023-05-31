@@ -137,10 +137,6 @@ h2{
     font-weight: 700;
 }
 
-.carousel-viewport{
-    
-}
-
 .carousel-btn{
     display: flex;
     justify-content: space-between;
