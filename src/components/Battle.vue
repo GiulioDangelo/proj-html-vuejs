@@ -219,6 +219,12 @@ font-size: 20px;
 margin-bottom: 30px;
 font-weight: 600;
 border-radius: 10px;
+
+    &:hover{
+        background-color: rgb(32, 32, 70);
+        color:$green;
+        border: 1px solid $green;
+    }
 }
 
 .carousel-btn{
