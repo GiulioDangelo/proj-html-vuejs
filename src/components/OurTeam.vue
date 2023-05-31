@@ -18,9 +18,13 @@ export default {
         Navigation,
     },
 
-    methods: {
+    setup() {
+            const myCarousel = ref(null);
 
-    },
+            return {
+            myCarousel,
+            }
+        },
 }
 </script>
 
@@ -31,10 +35,10 @@ export default {
                 <h2>Our Experts Team Members</h2>
             </div>
     
-            <!-- <div class="carousel-btn">
-                <button class="prev"><img src="../assets/img/image (11).svg"></button>
-                <button class="next"><img src="../assets/img/image (12).svg"></button>
-            </div> -->
+            <div class="carousel-btn">
+                <button @click=myCarousel.prev class="prev" ><img src="../assets/img/image (11).svg"></button>
+                <button @click=myCarousel.next class="next" ><img src="../assets/img/image (12).svg"></button>
+            </div>
     
             <Carousel :items-to-show="4" :wrap-around="true" :autoplay="3000" ref="myCarousel">
                 <slide class="cards" v-for="card in store.members">
@@ -102,18 +106,32 @@ h2{
 .prev,.next{
     padding: 10px;
     border-radius: 100px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-inline: 5px;
+    margin-bottom: 5px;
         img{
             height: 20px;
         }
 }
+
+.next{
+    background-color: $green;
+
+        img{
+            filter: invert(1);
+        }
+}
      
 .cards{
-    width: 330px;
+    height: 400px;
     margin-inline: 20px;
 
     img {
         width: 100%;
+        height: 100%;
     }
 }
 

@@ -18,9 +18,13 @@ export default {
         Navigation,
     },
 
-    methods: {
+    setup() {
+            const myCarousel = ref(null);
 
-    },
+            return {
+            myCarousel,
+            }
+        },
 }
 </script>
 
@@ -35,10 +39,10 @@ export default {
                 <h2>Keep Eyes & Manage upcoming Battle</h2>
             </div>
 
-            <!-- <div class="carousel-btn">
-                        <button class="prev"><img src="../assets/img/image (11).svg"></button>
-                        <button class="next"><img src="../assets/img/image (12).svg"></button>
-                    </div> -->
+            <div class="carousel-btn">
+                <button @click=myCarousel.prev class="prev" ><img src="../assets/img/image (11).svg"></button>
+                <button @click=myCarousel.next class="next" ><img src="../assets/img/image (12).svg"></button>
+            </div>
 
             <Carousel :items-to-show="3" :wrap-around="true" ref="myCarousel">
                 <slide class="cards" v-for="card in store.clans.slice(0,3)">
@@ -215,5 +219,36 @@ font-size: 20px;
 margin-bottom: 30px;
 font-weight: 600;
 border-radius: 10px;
+}
+
+.carousel-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.prev,.next{
+    padding: 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-left: 15px;
+    margin-bottom: 5px;
+        img{
+            height: 20px;
+        }
+}
+
+.next{
+    background-color: $green;
+
+        img{
+            filter: invert(1);
+        }
+}
+
+.prev{
+    background-color: white;
 }
 </style>

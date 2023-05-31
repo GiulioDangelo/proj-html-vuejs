@@ -8,8 +8,7 @@ import Upcoming from './components/Upcoming.vue'
 import Trending from './components/Trending.vue'
 import Battle from './components/Battle.vue'
 import OurTeam from './components/OurTeam.vue'
-
-
+import Testionials from './components/Testionials.vue'
 
 
 export default {
@@ -28,6 +27,7 @@ export default {
       Trending,
       Battle,
       OurTeam,
+      Testionials,
     }
   }
 </script>
@@ -42,6 +42,7 @@ export default {
   <Trending/>
   <Battle/>
   <OurTeam/>
+  <Testionials/>
 </template>
 
 <style lang="scss">

@@ -21,6 +21,14 @@ export default {
 			store
 		}
 	},
+
+	setup() {
+            const myCarousel = ref(null);
+
+            return {
+            myCarousel,
+            }
+        },
 };
 </script>
 
@@ -45,14 +53,19 @@ export default {
 				</div>
 
 
-				<Carousel :items-to-show="2" ref="myCarousel">
+			<div class="carousel-btn">
+                <button @click=myCarousel.prev class="prev" ><img src="../assets/img/image (11).svg"></button>
+                <button @click=myCarousel.next class="next" ><img src="../assets/img/image (12).svg"></button>
+            </div>
+
+				<Carousel :items-to-show="2" :autoplay="3000" ref="myCarousel">
 					<Slide v-for="img in this.imgs" :key="slide">
 						<div>
-							<img :src="img.img">
-
-							<div>{{ store.games[0].name }}</div>
-							<div>{{ store.games[0].text }}</div>
-
+							<img :src="img.img">	
+						</div>
+						<div>
+							<div class="caro-img">{{ store.games[0].name }}</div>
+							<div class="caro-img">{{ store.games[0].text }}</div>
 						</div>
 					</Slide>
 
@@ -98,6 +111,50 @@ export default {
 	}
 }
 
+span{
+	color: $green;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.carousel__slide{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+
+.carousel-btn{
+	width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.prev,.next{
+    padding: 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-inline: 5px;
+    margin-bottom: 15px;
+        img{
+            height: 20px;
+        }
+}
+
+.next{
+    background-color: $green;
+
+        img{
+            filter: invert(1);
+        }
+}
 
 .left {
 	display: flex;
@@ -135,10 +192,6 @@ export default {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-
-	img {
-		height: 200px;
-	}
 }
 
 .carousel {

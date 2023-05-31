@@ -116,9 +116,22 @@ h2{
 .prev,.next{
     padding: 10px;
     border-radius: 100px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-inline: 5px;
+    margin-bottom: 5px;
         img{
             height: 20px;
+        }
+}
+
+.next{
+    background-color: $green;
+
+        img{
+            filter: invert(1);
         }
 }
 
