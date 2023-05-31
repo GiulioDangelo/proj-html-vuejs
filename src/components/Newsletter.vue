@@ -16,8 +16,9 @@ export default {
         </div>
         
         <div class="input">
-            <div>
+            <div class="img-container">
                 <img class="msg" src="./../assets/img/image (14).svg">
+                enter your email
             </div>
             <button class="btn">subscribe</button>
         </div>
@@ -37,7 +38,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     background-color: $dark-blue;
-    height: 200px;
+    height: 160px;
 }
 
 h4{
@@ -50,6 +51,7 @@ h4{
 .input{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 55px;
     width: 50%;
     margin-right: 50px;
@@ -63,5 +65,16 @@ h4{
     font-size: 16px;
     font-weight: 500;
     border-radius: 100px;
+}
+
+.img-container{
+    color: lightgrey;
+}
+
+.msg{
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(48%) sepia(62%) saturate(6830%) hue-rotate(134deg) brightness(103%) contrast(104%);
+    margin-left: 30px;
+    margin-right: 10px;
 }
 </style>
