@@ -90,6 +90,8 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/color.scss' as *;
 .background-image {
+    display: flex;
+    align-items: center;
 	height: 700px;
 	background-repeat: no-repeat;
 	background-size: cover;
