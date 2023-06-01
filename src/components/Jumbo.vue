@@ -1,10 +1,17 @@
 <script>
 import Header from './../components/Header.vue'
+import { store } from './../../store'
 
 export default {
     components: {
         Header,
-    }
+    },
+
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
   <!-- v-for="item in menuList"
@@ -12,7 +19,7 @@ export default {
   :img="item.img" -->
 <template>
     <div class="Container">
-        <Header />
+        <Header/>
 
         <div class="text">
             <h4>WELCOME TO RAXG</h4>

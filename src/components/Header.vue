@@ -1,5 +1,6 @@
 <script>
 import { store } from './../../store'
+import ItemList from './../components/ItemList.vue'
 
 export default {
     data() {
@@ -43,6 +44,11 @@ export default {
             this.totalPrice = sum;
         },
     },
+
+    components:{
+        ItemList,
+    }
+
 };
 
 </script>
@@ -55,31 +61,9 @@ export default {
 
         <div class="center">
             <ul class="links">
-                <li v-for="(item , i) in store.menuList" 
-                :class="{ 'first-card': i === 0 }"
-                >
-                    {{ item.item }}
-                    <div class="dropdown">
-                        <img class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            src="./../assets/img/image.svg">
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">About Us</a></li>
-                            <li><a class="dropdown-item" href="#">Matches</a></li>
-                            <li><a class="dropdown-item" href="#">Team</a></li>
-                            <li><a class="dropdown-item" href="#">Squad</a></li>
-                            <li><a class="dropdown-item" href="#">Squad Details</a></li>
-                            <li><a class="dropdown-item" href="#">Coming Soon</a></li>
-                            <li><a class="dropdown-item" href="#">404</a></li>
-                        </ul>
-                    </div>
-
-
-                    <img>
-                </li>
+                <ItemList v-for="(item, i) in this.store.menuList" :item="item.item" :img="item.img" />
             </ul>
         </div>
-
         <div class="right">
             <div class="icon"><img src="./../assets/img/image (1).svg" alt=""></div>
 
@@ -121,15 +105,6 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/color.scss' as *;
 
-.dropdown-menu{
-    background-color: rgb(32, 32, 70);
-}
-
-.dropdown-item{
-    color: $green;
-    border-bottom: 1px solid white;
-}
-
 .nav {
     display: flex;
     justify-content: space-around;
@@ -140,32 +115,12 @@ export default {
     right: 0;
 }
 
-.center {
-    .links {
-        padding: 0px !important;
-        margin-bottom: 0px;
-        display: flex;
-        align-items: center;
-        height: 100%;
-
-        li {
-            display: flex;
-            align-items: center;
-            margin-inline: 20px;
-            list-style: none;
-            color: white;
-
-            img {
-                height: 15px;
-                margin-inline: 5px;
-                filter: invert(1);
-            }
-
-            &:hover{
-                cursor: default;
-            }
-        }
-    }
+.links {
+    padding: 0px !important;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .right {
@@ -179,6 +134,7 @@ export default {
         border-radius: 100px;
         position: relative;
         padding: 6px;
+
         img {
             height: 100%;
             padding: 5px;
@@ -224,12 +180,12 @@ export default {
     object-fit: contain;
 }
 
-.item-num{
+.item-num {
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    background-color:rgb(64, 82, 253);
+    background-color: rgb(64, 82, 253);
     padding: 10px;
     width: 10px;
     height: 10px;
@@ -239,10 +195,12 @@ export default {
     top: -10px;
     right: -10px;
 }
-.first-card{
+
+.first-card {
     color: $green !important;
-     img{
+
+    img {
         filter: brightness(0) saturate(100%) invert(48%) sepia(62%) saturate(6830%) hue-rotate(134deg) brightness(103%) contrast(104%) !important;
-     }
+    }
 }
 </style>
