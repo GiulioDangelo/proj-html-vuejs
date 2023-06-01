@@ -83,6 +83,11 @@ export default {
             list-style: none;
             color: white;
 
+                &:hover{
+                    cursor: pointer;
+                    color: $green;
+                }
+
             img {
                 height: 15px;
                 margin-inline: 5px;

@@ -160,6 +160,10 @@ export default {
                 margin-inline: 5px;
                 filter: invert(1);
             }
+
+            &:hover{
+                cursor: default;
+            }
         }
     }
 }
@@ -235,7 +239,6 @@ export default {
     top: -10px;
     right: -10px;
 }
-
 .first-card{
     color: $green !important;
      img{
