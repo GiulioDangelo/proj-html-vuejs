@@ -274,4 +274,13 @@ export default {
 	margin-bottom: 10px;
 	font-size: 20px;
 }
+
+@media screen and (max-width: 1340px){
+    .card-big{
+        flex-direction: column;
+        flex-wrap: wrap;
+		align-items: center;
+    }
+}
+
 </style>

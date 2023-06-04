@@ -10,14 +10,25 @@ export default {
 
             <div class="col-6">
                 <div class="images-container">
-                    <img src="../assets/img/exprience-shape.png" class="shape">
-                    <img src="../assets/img/exprince.jpg" class="main-img">
-                    <img src="../assets/img/shape1.png" class="green-1">
-                    <img src="../assets/img/shape2.png" class="green-2">
+                    <div class="shape">
+                        <img src="../assets/img/exprience-shape.png">
+                    </div>
+
+                    <div class="main-img">
+                        <img src="../assets/img/exprince.jpg" class="main-img">
+                    </div>
+
+                    <div class="green-1">\
+                        <img src="../assets/img/shape1.png" class="green-1">
+                    </div>
+
+                    <div class="green-2">
+                        <img src="../assets/img/shape2.png" class="green-2">
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-6 bottom">
                 <span class="text-green">12 Year Experience</span>
                 <h2>We Are The Best Gaming Company</h2>
                 <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed,
@@ -107,6 +118,11 @@ export default {
         }
     }
 
+    .row{
+        display: flex;
+        align-items: center;
+    }
+
     .button-container {
         display: flex;
 
@@ -171,6 +187,7 @@ export default {
 
     .green-1 {
         position: absolute;
+        max-width: 440px;
         left: -50px;
         top: -50px;
     }
@@ -183,4 +200,18 @@ export default {
         height: 260px;
 
     }
-}</style>
+}
+
+// media query
+
+@media screen and (max-width: 1405px){
+    .row{
+        flex-direction:column;
+    }
+
+    .bottom{
+        margin-top: 90px;
+    }
+}
+
+</style>
